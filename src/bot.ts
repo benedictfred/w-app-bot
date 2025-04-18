@@ -8,6 +8,7 @@ import schedule from "node-schedule";
 import { Birthday } from "./models/Birthday";
 
 dotenv.config();
+const PORT = process.env.PORT || 8000;
 
 const server = http.createServer();
 
@@ -104,6 +105,6 @@ mongoose.connect(process.env.MONGO_URI as string).then(() => {
   client.initialize();
 });
 
-server.listen(8000, () => {
-  console.log("Listening on port 8000");
+server.listen(PORT, () => {
+  console.log(`Listening on port ${PORT}`);
 });
