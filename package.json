@@ -1,0 +1,27 @@
+{
+  "name": "w-app-bot",
+  "version": "1.0.0",
+  "description": "whatsapp bot for bday messages ",
+  "main": "src/bot.ts",
+  "scripts": {
+    "start": "npx nodemon"
+  },
+  "author": "Nebolisa Ugochukwu",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "mongoose": "^8.13.2",
+    "node-schedule": "^2.1.1",
+    "nodemon": "^3.1.9",
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.27.0",
+    "wwebjs-mongo": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.1",
+    "@types/node-schedule": "^2.1.7",
+    "@types/qrcode-terminal": "^0.12.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
