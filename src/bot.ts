@@ -15,6 +15,10 @@ mongoose.connect(process.env.MONGO_URI as string).then(() => {
       store: store,
       backupSyncIntervalMs: 300000,
     }),
+    puppeteer: {
+      headless: true,
+      args: ["--no-sandbox", "--disable-setuid-sandbox"],
+    },
   });
 
   client.once("ready", () => {

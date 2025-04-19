@@ -4,7 +4,8 @@
   "description": "whatsapp bot for bday messages ",
   "main": "src/bot.ts",
   "scripts": {
-    "start": "npx nodemon"
+    "dev": "npx nodemon",
+    "start": "ts-node src/bot.ts"
   },
   "author": "Nebolisa Ugochukwu",
   "license": "ISC",
