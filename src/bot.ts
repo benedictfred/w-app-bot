@@ -1,16 +1,12 @@
 import { Client, RemoteAuth } from "whatsapp-web.js";
 import { MongoStore } from "wwebjs-mongo";
 import mongoose from "mongoose";
-import http from "http";
 import dotenv from "dotenv";
 import qrcode from "qrcode-terminal";
 import schedule from "node-schedule";
 import { Birthday } from "./models/Birthday";
 
 dotenv.config();
-const PORT = process.env.PORT || 8000;
-
-const server = http.createServer();
 
 mongoose.connect(process.env.MONGO_URI as string).then(() => {
   const store = new MongoStore({ mongoose: mongoose });
@@ -103,8 +99,4 @@ mongoose.connect(process.env.MONGO_URI as string).then(() => {
   });
 
   client.initialize();
-});
-
-server.listen(PORT, () => {
-  console.log(`Listening on port ${PORT}`);
 });
